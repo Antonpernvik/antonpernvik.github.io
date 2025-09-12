@@ -97,3 +97,98 @@ body{
 /* Responsive */
 @media (max-width:1020px){ .hero-grid{ grid-template-columns:1fr; } .hero-media{ justify-self:start; max-width:320px; } }
 @media (max-width:860px){ .feature-grid, .contact-block{ grid-template-columns:1fr; } }
+
+
+
+/* ===== Mina projekt-sektion ===== */
+#mina-projekt {
+  background: #f4f6f9;            /* ljus bakgrund som i din bild */
+  padding: 6rem 0;                /* gott om luft */
+}
+
+#mina-projekt .container.center {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#mina-projekt h2 {
+  font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+  line-height: 1.2;
+  margin: 0 0 1rem 0;
+  color: #0f172a;                 /* djup grå/blå */
+  font-weight: 800;
+}
+
+#mina-projekt p {
+  color: #5b6473;                 /* “muted” text */
+  font-size: 1.05rem;
+  margin: 0 auto 1.75rem;
+  max-width: 720px;
+}
+
+/* Länk-stil som i din skärmdump (blå, enkel) */
+#mina-projekt .btn-projects {
+  display: inline-block;
+  font-weight: 700;
+  text-decoration: none;
+  color: #1d4ed8;                 /* blå */
+  transition: transform .15s ease, color .2s ease;
+}
+
+#mina-projekt .btn-projects:hover,
+#mina-projekt .btn-projects:focus {
+  color: #1e40af;                 /* mörkare blå vid hover */
+  transform: translateY(-1px);
+  text-decoration: underline;
+}
+
+/* Valfri “projektbild” under länken */
+.project-hero {
+  margin: 2.5rem auto 0;
+  width: min(100%, 980px);
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  box-shadow: 0 12px 36px rgba(15, 23, 42, 0.12);
+  object-fit: cover;
+}
+
+/* Lite extra spacing mot nästa sektion */
+#contact {
+  scroll-margin-top: 80px; /* skön scroll-position vid ankarlänk */
+}
+
+/* === My Projects Button === */
+.btn.btn-projects {
+  background: #1d4ed8;            /* blå bakgrund */
+  color: #fff;                    /* vit text */
+  padding: 0.9rem 1.6rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn.btn-projects::after {
+  content: "→";
+  font-size: 1.2rem;
+  transition: transform 0.2s ease;
+}
+
+.btn.btn-projects:hover {
+  background: #1e40af;            /* mörkare blå */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+.btn.btn-projects:hover::after {
+  transform: translateX(4px);
+}
+
+

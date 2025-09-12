@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Projects – Anton Pernvik</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Back to Home">
+        <span class="brand-text">Anton <strong>Pernvik</strong></span>
+      </a>
+      <nav id="primary-nav" class="nav" aria-label="Main Menu">
+        <a href="index.html#about">About Me</a>
+        <a class="btn btn-linkedin" href="https://www.linkedin.com/in/anton-pernvik-95712b1b5/" target="_blank" rel="noopener">in</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero with image only -->
+  <section class="hero project-hero">
+    <div class="container center">
+      <img src="https://myproject.fr/images/myproject/landing/my-project-landing.png" 
+           alt="My Projects" class="hero-image-small">
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Anton Pernvik</p>
+      <a class="footer-link" href="Professional CV Resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
