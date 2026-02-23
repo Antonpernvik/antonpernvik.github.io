@@ -50,50 +50,61 @@ a{ color: var(--ink); }
   padding-bottom: clamp(1rem, 3vw, 2rem);
 }
 .newsletter-card{
-  border:1px solid var(--line);
-  border-radius:20px;
-  padding:clamp(1.1rem, 3vw, 2rem);
+  border:1px solid #343434;
+  border-radius:24px;
+  padding:clamp(1.25rem, 3.4vw, 2.25rem);
   background:
-    radial-gradient(160px 110px at 15% 0%, rgba(255,255,255,.08), rgba(255,255,255,0) 70%),
-    linear-gradient(180deg, #111, #0b0b0b);
+    radial-gradient(260px 140px at 8% -12%, rgba(255,255,255,.16), rgba(255,255,255,0) 72%),
+    radial-gradient(240px 130px at 100% 120%, rgba(255,255,255,.08), rgba(255,255,255,0) 75%),
+    linear-gradient(160deg, #131313, #080808 58%);
   box-shadow: var(--shadow);
+  position:relative;
 }
 .newsletter-card h2{
-  margin:0 0 .4rem;
+  margin:.7rem 0 .4rem;
+  font-size:clamp(1.6rem, 3.2vw, 2.15rem);
+  line-height:1.1;
 }
-.newsletter-card p{
-  margin:0 0 1rem;
+.newsletter-sub{
+  margin:0 0 1.1rem;
+  color:var(--muted);
+  max-width:52ch;
 }
 .newsletter-form{
   display:grid;
   grid-template-columns: 1fr auto;
-  gap:.7rem;
+  gap:.75rem;
+  align-items:center;
 }
 .newsletter-form input{
   width:100%;
-  border:1px solid var(--line);
-  border-radius:12px;
-  background:#070707;
+  border:1px solid #3a3a3a;
+  border-radius:14px;
+  background:#060606;
   color:#fff;
-  padding:.78rem .95rem;
+  padding:.9rem 1rem;
   outline:none;
+  font-size:1rem;
 }
 .newsletter-form input:focus{
-  border-color:#777;
+  border-color:#8e8e8e;
+  box-shadow:0 0 0 3px rgba(255,255,255,.08);
 }
 .newsletter-form button{
-  border:1px solid #fff;
-  border-radius:12px;
-  padding:.78rem 1rem;
-  background:#fff;
-  color:#000;
+  border:1px solid #f2f2f2;
+  border-radius:14px;
+  padding:.9rem 1.1rem;
+  background:#f5f5f5;
+  color:#050505;
   font-weight:700;
   cursor:pointer;
-  transition: transform .16s ease, background .16s ease;
+  white-space:nowrap;
+  transition: transform .16s ease, background .16s ease, box-shadow .16s ease;
 }
 .newsletter-form button:hover{
-  transform: translateY(-1px);
+  transform: translateY(-2px);
   background:#e9e9e9;
+  box-shadow:0 10px 24px rgba(0,0,0,.4);
 }
 .newsletter-message{
   min-height:1.2rem;
@@ -311,6 +322,7 @@ a{ color: var(--ink); }
 @media (max-width:860px){
   .robot-stage{ min-height:560px; }
   .newsletter-form{ grid-template-columns:1fr; }
+  .newsletter-form button{ width:100%; }
   .footer-actions{ justify-content:center; }
 }
 @media (min-width:960px){
