@@ -1,0 +1,61 @@
+/* Grundinställningar */
+body {
+  background-color: #f7f7f7;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Header */
+.header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+}
+
+/* Container för innehåll */
+.container {
+  padding: 30px;
+}
+
+/* Intro-del med bild + text */
+.intro {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+  display: inline-block;
+  max-width: 400px;
+}
+
+/* Profilbild */
+.profile-img {
+  width: 200px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+/* Knapp */
+.btn {
+  display: inline-block;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  margin-top: 30px;
+}

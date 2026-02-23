@@ -25,6 +25,7 @@
   <title>Anton Pernvik – Portfolio</title>
   <meta name="description" content="Portfolio för Anton Pernvik – Frontend & kundservice.">
   <link rel="preload" as="image" href="bild-anton.jpeg">
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@latest/build/spline-viewer.js"></script>
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -55,19 +56,12 @@
 
   <!-- Hero -->
   <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <h1>My name is <span>Anton Pernvik</span>.</h1>
-        <p class="sub">As a Growth Marketing student at Berghs School of Communication, I am developing my knowledge in digital marketing, analytics, and creative strategies for growth. With a strong interest in both data and communication, I am passionate about finding solutions that drive business forward and create value for both companies and customers.</p>
-
-        <!-- CTA-knappar -->
-        <div class="hero-actions">
-          <a class="btn btn-contact" href="#contact">Let's connect</a>
-          <a class="btn btn-resume" href="Professional CV Resume.pdf" target="_blank" rel="noopener">Resume</a>
-        </div>
-      </div>
-      <div class="hero-media">
-        <img src="bild-anton.jpeg" alt="Anton Pernvik" width="800" height="1000" loading="eager">
+    <div class="container hero-center">
+      <h1 class="hero-title">LETS CONNECT</h1>
+      <p class="hero-name">Anton Pernvik</p>
+      <div class="hero-actions hero-actions-center">
+        <a class="btn btn-contact" href="#contact">Let's connect</a>
+        <a class="btn btn-resume" href="Professional CV Resume.pdf" target="_blank" rel="noopener">Resume</a>
       </div>
     </div>
   </section>
@@ -96,6 +90,19 @@
   </div>
 </section>
 
+  <!-- Prompt -->
+  <section id="integration-prompt" class="section">
+    <div class="container narrow">
+      <div class="robot-stage" aria-label="Robot visual">
+        <spline-viewer
+          class="robot-spline"
+          loading-anim-type="spinner-small-dark"
+          url="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode">
+        </spline-viewer>
+      </div>
+    </div>
+  </section>
+
 
   <!-- Kontakt -->
   <section id="contact" class="section section-alt">
@@ -121,9 +128,66 @@
 
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Anton Pernvik</p>
-      <a class="footer-link" href="resume.pdf" target="_blank" rel="noopener">Ladda ned Resume</a>
+    <div class="container footer-v2">
+      <div class="footer-grid">
+        <div>
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="Professional CV Resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Community</h3>
+          <ul>
+            <li><a href="https://www.linkedin.com/in/anton-pernvik-95712b1b5/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="#" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="#top">Portfolio Feed</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Support</h3>
+          <ul>
+            <li><a href="mailto:anton.pernvik@gmail.com">Email</a></li>
+            <li><a href="tel:+46723008077">Phone</a></li>
+            <li><a href="#contact">Let's Connect</a></li>
+            <li><a href="Professional CV Resume.pdf" target="_blank" rel="noopener">Download CV</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">Accessibility</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-actions">
+        <div class="footer-socials" aria-label="Social links">
+          <a class="social-btn" href="#" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+          <a class="social-btn" href="#" target="_blank" rel="noopener" aria-label="Instagram">ig</a>
+          <a class="social-btn" href="https://www.linkedin.com/in/anton-pernvik-95712b1b5/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+          <a class="social-btn" href="#contact" aria-label="Connect">+</a>
+        </div>
+        <div class="footer-cta">
+          <a class="footer-chip" href="#contact">Connect</a>
+          <a class="footer-chip" href="Professional CV Resume.pdf" target="_blank" rel="noopener">Resume</a>
+        </div>
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-meta">
+        <p>© <span id="year"></span> Anton Pernvik. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 
