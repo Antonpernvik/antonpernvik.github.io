@@ -103,6 +103,33 @@
     </div>
   </section>
 
+  <!-- Projektuppdateringar -->
+  <section id="project-updates" class="section">
+    <div class="container narrow">
+      <div class="newsletter-card">
+        <h2>Projektuppdateringar</h2>
+        <p class="muted">Få uppdateringar om nya case, förbättringar och releaser.</p>
+        <form
+          id="updates-form"
+          class="newsletter-form"
+          action="https://formspree.io/f/DIN_UNIKA_ID"
+          method="POST"
+        >
+          <label for="updates-email" class="sr-only">E-postadress</label>
+          <input
+            id="updates-email"
+            type="email"
+            name="email"
+            placeholder="din@email.com"
+            required
+          />
+          <button type="submit">Få uppdateringar</button>
+        </form>
+        <p id="updates-message" class="newsletter-message" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
 
   <!-- Kontakt -->
   <section id="contact" class="section section-alt">
@@ -203,6 +230,35 @@
     const header = document.querySelector('.site-header');
     const setShadow = () => header.classList.toggle('elevated', window.scrollY > 4);
     setShadow(); window.addEventListener('scroll', setShadow);
+
+    const updatesForm = document.getElementById('updates-form');
+    const updatesMessage = document.getElementById('updates-message');
+    if (updatesForm && updatesMessage) {
+      updatesForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        updatesMessage.textContent = 'Skickar...';
+        updatesMessage.classList.remove('is-error');
+
+        try {
+          const response = await fetch(updatesForm.action, {
+            method: 'POST',
+            body: new FormData(updatesForm),
+            headers: { Accept: 'application/json' }
+          });
+
+          if (response.ok) {
+            updatesForm.reset();
+            updatesMessage.textContent = 'Tack! Du är nu med på listan.';
+          } else {
+            updatesMessage.textContent = 'Något gick fel. Testa igen om en stund.';
+            updatesMessage.classList.add('is-error');
+          }
+        } catch (error) {
+          updatesMessage.textContent = 'Nätverksfel. Kontrollera uppkoppling och försök igen.';
+          updatesMessage.classList.add('is-error');
+        }
+      });
+    }
   </script>
 </body>
 </html>
